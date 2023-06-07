@@ -1,0 +1,39 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "age": 30,
+        "email": "johndoe@example.com"
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "age": 25,
+        "email": "janesmith@example.com"
+      },
+      {
+        "id": 3,
+        "name": "David Johnson",
+        "age": 35,
+        "email": "davidjohnson@example.com"
+      }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "name": "iPhone X",
+        "price": 999
+      },
+      {
+        "id": 2,
+        "name": "Samsung Galaxy S21",
+        "price": 899
+      },
+      {
+        "id": 3,
+        "name": "Google Pixel 6",
+        "price": 799
+      }
+    ]
+  }
