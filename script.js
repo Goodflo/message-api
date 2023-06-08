@@ -1,16 +1,16 @@
-const jsonServer = require("json-server");
+// const jsonServer = require("json-server");
 const express = require('express');
 const mongoose = require("mongoose");
 const Message = require('./model/messageModel');
 
 
-const server = jsonServer.create();
-const router = jsonServer.router("db.json");
-const  middlewares = jsonServer.defaults();
+// const server = jsonServer.create();
+// const router = jsonServer.router("db.json");
+// const  middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3000
 
-server.use(middlewares);
-server.use(router);
+// server.use(middlewares);
+// server.use(router);
 
 
 
@@ -35,7 +35,7 @@ app.get('/message', async(req, res) =>{
         const messages = await Message.find().then({});
         res.status(200).json(messages);
     } catch (error) {
-        console.log(error.message);
+        // console.log(error.message);
         res.status(500).json({message: error.message});
     }
 })
@@ -53,7 +53,7 @@ app.put('/message/:id', async(req, res)=>{
 
    
     } catch (error) {
-        console.log(error.message);
+        // console.log(error.message);
         res.status(500).json({message: error.message})
     }
 })
@@ -83,14 +83,14 @@ mongoose.connect("mongodb+srv://wisdom:wisdom2502@aluxapi.2ewxrpe.mongodb.net/al
     console.log("Connected to DB")
 
 //Setting Port 
-    //     app.listen(3000, () => {
-    //   console.log('Listening on port');
+        app.listen(port, () => {
+      console.log('Listening on' + port);
 })
 
 //Catching some Erorrs
-// }).catch((error)=>{
-//     console.log(error);
-// });
+}).catch((error)=>{
+    console.log(error);
+});
 
 
-server.listen(port);
+// server.listen(port);
